@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html style="height: 100%;">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>web</title>
+</head>
+
+<body>
+  <div id="app"></div>
+  <script type=text/javascript src="./static/js/qwebchannel.js"></script>
+  <script>
+    if (typeof qt !== "undefined") {
+      new QWebChannel(qt.webChannelTransport, function (channel) {
+        window.channel = channel;
+        // window.console = channel.objects.messager;
+      })
+    }
+  </script>
+  <!-- built files will be auto injected -->
+</body>
+
+</html>
